@@ -1,0 +1,178 @@
+:root {
+    --primary-blue: #1E90FF;
+    --white: #FFFFFF;
+    --light-gray: #f0f2f5;
+    --dark-gray: #333333;
+    --accent-blue: #00BFFF;
+    --border-radius: 12px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 40px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(45deg, var(--primary-blue), var(--accent-blue));
+    color: var(--white);
+    text-align: center;
+    padding: 80px 20px;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+.countdown-timer {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: rgba(0,0,0,0.2);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+}
+
+/* Voting Grid */
+.voting-grid {
+    padding: 60px 0;
+}
+#nominees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.nominee-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nominee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(30, 144, 255, 0.2);
+}
+.nominee-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: var(--light-gray);
+}
+.nominee-info {
+    padding: 20px;
+}
+.nominee-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+.progress-bar {
+    background-color: var(--light-gray);
+    border-radius: 30px;
+    height: 25px;
+    width: 100%;
+    overflow: hidden;
+    margin: 15px 0;
+}
+.progress-bar-fill {
+    background: linear-gradient(90deg, var(--accent-blue), var(--primary-blue));
+    height: 100%;
+    width: 0%; /* Updated by JS */
+    border-radius: 30px;
+    transition: width 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.vote-button {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+.vote-button:hover {
+    background-color: var(--accent-blue);
+}
+.vote-button.disabled, .vote-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Other Sections */
+.rules, .share-cta, .about, footer {
+    padding: 60px 0;
+    text-align: center;
+}
+.rules { background-color: var(--white); }
+.about { background-color: var(--white); }
+.share-cta { background: var(--primary-blue); color: var(--white); }
+.share-cta button { background-color: var(--white); color: var(--primary-blue); }
+h2 { font-size: 2.5rem; font-weight: 900; margin-bottom: 20px; }
+.rules ol { display: inline-block; text-align: left; max-width: 500px; }
+.trust-badge { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; color: var(--primary-blue); font-weight: 700; }
+footer { background-color: var(--dark-gray); color: var(--light-gray); }
+footer a { color: var(--white); text-decoration: none; }
+footer a:hover { color: var(--accent-blue); }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    h2 { font-size: 2rem; }
+    #nominees-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    border: 8px solid var(--light-gray);
+    border-top: 8px solid var(--primary-blue);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 40px auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

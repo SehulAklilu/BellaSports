@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Sports - Creator Awards</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="logo.svg" alt="Bella Sports Logo" class="logo">
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Vote for Your Favorite Sports Creator</h1>
+                <p>Your vote matters! Help us crown the best in sports content creation.</p>
+                <div class="countdown-timer" id="countdown-timer">
+                    Voting Ends In: <span id="timer"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="voting-grid">
+            <div class="container" id="nominees-grid">
+                <!-- Nominee cards will be injected here by JavaScript -->
+                <div class="loading-spinner"></div>
+            </div>
+        </section>
+
+        <section class="rules">
+            <div class="container">
+                <h2>How It Works</h2>
+                <ol>
+                    <li>Browse the nominees below.</li>
+                    <li>Click the "Vote" button for your favorite creator.</li>
+                    <li>You can only vote once per device.</li>
+                    <li>Results are updated live until the final 48 hours.</li>
+                </ol>
+                <div class="trust-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V13H5V6.3l7-3.11v9.8z"></path></svg>
+                    <span>Secure & Fair Voting</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="share-cta">
+            <div class="container">
+                <h2>Spread the Word!</h2>
+                <p>Share the awards with your friends and help your favorite creator win.</p>
+                <button id="share-button">Share on Social Media</button>
+            </div>
+        </section>
+
+        <section class="about">
+             <div class="container">
+                <h2>About Bella Sports</h2>
+                <p>Bella Sports is a leading platform dedicated to celebrating the passion, dedication, and creativity within the sports world. We connect fans with the creators who bring them closer to the games they love. These awards are our way of giving back to the community and recognizing excellence.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>Bella Sports</strong></p>
+            <p>123 Sports Lane, Athlete City, 45678</p>
+            <p>Phone: (123) 456-7890 | Email: contact@bellasports.com</p>
+            <div class="socials">
+                <a href="#">Twitter</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase App and Firestore SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
