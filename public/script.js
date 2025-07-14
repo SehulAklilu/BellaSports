@@ -2,9 +2,9 @@
 // IMPORTANT: Replace with your Firebase project configuration
 
 
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+//   // Import the functions you need from the SDKs you need
+//   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+//   import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -20,9 +20,9 @@
     measurementId: "G-SJ7KFHYGX4"
   };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+//   // Initialize Firebase
+//   const app = initializeApp(firebaseConfig);
+//   const analytics = getAnalytics(app);
 
 
 // --- SETTINGS ---
@@ -30,7 +30,7 @@
 const LIVE_UPDATES_ENABLED = true;
 
 // Set the voting end date (YYYY-MM-DDTHH:MM:SS)
-const VOTING_END_DATE = new Date("2024-12-31T23:59:59");
+const VOTING_END_DATE = new Date("2025-12-31T23:59:59");
 
 // --- INITIALIZATION ---
 firebase.initializeApp(firebaseConfig);
